@@ -26,15 +26,20 @@ a{
     color: white;
 }
   
+input{
+    background-color: black;
+    color: white;
+}
+
 .userlogin {
     background-color: rgb(7, 59, 57);
     height: auto;
     width: 400px;
+    padding-bottom: 5px;
     border: 10px groove rgba(4, 18, 61, 0.767);
-    margin-top: 10%;
+    margin-top: 8%;
     text-align-last: center;
     border-radius: 15px / 30px;
-    padding-bottom: 5px;
 }
   
 .title {
@@ -54,9 +59,10 @@ a{
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
     float: left;
-    margin-left: 50px;
+    margin-left: 35px;
     margin-right: 5px;
     padding: 5px;
+    text-align: center;
 }
   
 .userid input {
@@ -71,10 +77,11 @@ a{
 }
   
 .userpassword h1 {
+    text-align: center;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
     float: left;
-    margin-left: 50px;
+    margin-left: 35px;
     margin-right: 5px;
     padding: 5px;
 }
@@ -84,38 +91,6 @@ a{
     width: 300px;
     border: solid 2px rebeccapurple;
     border-radius: 10px;
-}
-  
-.buttons {
-    margin-top: 20px;
-    display: inline-flex;
-}
-  
-.buttons img {
-    float: left;
-}
-  
-button {
-    border-radius: 15px;
-    width: 120px;
-    height: 35px;
-}
-
-input,button{
-    background-color: black;
-    color: white;
-}
-  
-.buttons p {
-    margin-top: 10px;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-}
-  
-.link {
-    margin-top: 20px;
 }
 
 .registro,.inicio{

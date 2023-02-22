@@ -4,17 +4,23 @@
   }
   
 body {
-    background-image: url(../images/);
+    background-image: url(../images/fondo.jpeg);
     color: rgb(25, 75, 120);
     display: flex;
     align-items: center;
     flex-direction: column;
     align-items: center;
 }
+
+img{
+    margin-left: 5px;
+    width: 25px;
+    height: 25px;
+}
   
 .userlogin {
     background-color: rgb(223, 187, 6);
-    height: 400px;
+    height: 440px;
     width: 400px;
     border-radius: 15px solid rgb(80, 200, 33);
     margin-top: 10%;
@@ -79,7 +85,7 @@ body {
     float: left;
 }
   
-.buttons button {
+button {
     border-radius: 15px;
     width: 120px;
     height: 35px;
@@ -96,4 +102,8 @@ body {
 .link {
     margin-top: 20px;
     color: darkmagenta;
-}  
+}
+
+.registro{
+    margin-top: 20px;
+}

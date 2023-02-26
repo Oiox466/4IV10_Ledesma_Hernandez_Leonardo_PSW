@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    color: #86A39B;
+}
+
+p, h1{
+    margin: 0;
+}
+body{
+    background-image: url(../images/fondo.png);
+}
+
+h1{
+    font-size: 2rem;
+}
+
+form{
+    height: 300px;
+    margin-top: 30px;
+}
+
+input{
+    border: 0;
+    padding: 1px;
+    margin: 3px;
+    height: 10%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    color: #757459;
+    background-color: #86F0D3;
+    box-shadow: 3px 2px 3px #F0ECAA;
+}
+
+label{
+    font-size: larger;
+    margin: 5px;
+}
+
+form , .textos{
+    text-align: justify;
+    padding: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-size: 1rem;
+    outline: 8px groove #5BA367;
+    background-color: rgb(40, 31, 35);
+}

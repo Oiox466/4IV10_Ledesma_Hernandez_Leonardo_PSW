@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/stylesejercicios.css">
+    <!-- <link rel="stylesheet" href="./css/stylesejercicios.css"> -->
     <title>Menu</title>
 </head>
 <body>
@@ -30,49 +30,58 @@
     <main>
         <article id="ejercicio-1">
             <h2>Ejercicio 1</h2>
-            <p>Suponga que un individuo desea invertir su capital en un banco y desea saber cuanto dinero ganara despues de un mes si el banco paga a razon de 8% mensual siendo el maximo de meses de 36.</p>
-            <form name="formulario" method="get">
+            <p>Suponga que un individuo desea invertir su capital en un banco y desea saber cuánto dinero ganará después de un mes si el banco paga a razon de 8% mensual siendo el maximo de meses de 36.</p>
+            <form method="get">
                 <label>¿Cuánto dinero vas a invertir?</label>
-                <input type="text" id="invertir">
+                <input type="number" min="1" max="1000000" id="invertir" onkeypress="return validarN(event)">
                 <br>
                 <label>¿Por cuántos meses lo vas a invertir?</label>
-                <input type="text" id="meses">
+                <input type="number" min="1" max="36" id="meses" onkeypress="return validarN(event)">
                 <br>
-                <input type="button" value="Calcular">
-                <input type="button" value="Vaciar">
+                <input type="text" readonly id="resultado-1">
+                <br>
+                <input type="button" value="Calcular" onclick="return Euno()">
+                <input type="reset" value="Vaciar">
             </form>
         </article>
 
         <article id="ejercicio-2">
             <h2>Ejercicio 2</h2>
-            <p>Un vendedor recibe un sueldo base mas un 10% extra por comisión de sus ventas las cuales son 5 que realiza durante un mes asi mismo se le hace un descuento del 12% por concepto de impuesto para lo cual desea saber el total que recibira como cobro.</p>
-            <form name="formulario" method="get">
+            <p>Un vendedor recibe un sueldo base más un 10% extra por comisión de sus ventas las cuales son 5 que realiza durante un mes, asi mismo, se le hace un descuento del 12% por concepto de impuesto para lo cual desea saber el total que recibira como cobro.</p>
+            <form method="get">
                 <label>Sueldo</label>
-                <input type="text" id="pago">
+                <input type="number" min="1" max="100000" id="pago" onkeypress="return validarN(event)">
                 <br>
-                <input type="button" value="Calcular">
-                <input type="button" value="Vaciar">
+                <label>Ganancia de las cinco ventas</label>
+                <input type="number" min="1" max="100000" id="cantidad-ventas" onkeypress="return validarN(event)">
+                <br>
+                <input type="text" readonly id="resultado-2">
+                <br>
+                <input type="button" value="Calcular" onclick="return Edos()">
+                <input type="reset" value="Vaciar">
             </form>
         </article>
         
         <article id="ejercicio-3">
             <h2>Ejercicio 3</h2>
-            <p>Se solicita un sistema de una tienda en el cual se debera solicitar el nombre del producto, la marca del producto, el tipo del producto y el precio del producto. Si el producto es "papas" recibe un 2% de descuento, si el producto es un "pastelito" recibe un 10% de descuento, si el producto es "un lacteo" recibe un 7.5% de descuento en la compra por lo cual se debera saber cuanto debera de pagar el cliente por el concepto del producto.</p>
-            <form>
+            <p>Se solicita un sistema de una tienda en el cuál se deberá solicitar el nombre, la marca, el tipo y el precio del producto. Si el producto es "papas" recibe un 2% de descuento, si es un "pastelito" recibe un 10% de descuento, si es "un lacteo" recibe un 7.5% de descuento en la compra por lo cual se debera saber cuanto deberá de pagar el cliente por el concepto del producto.</p>
+            <form method="get">
                 <label >Nombre del producto</label>
-                <input type="text" id="Nproducto">
+                <input type="text" id="Nproducto" onkeypress="return validarL()">
                 <br>
                 <label >Marca</label>
-                <input type="text" id="Mproducto">
+                <input type="text" id="Mproducto" onkeypress="return validarL()">
                 <br>
                 <label >Tipo</label>
-                <input type="text" id="Tproducto">
+                <input type="text" id="Tproducto" onkeypress="return validarL()">
                 <br>
                 <label >Precio</label>
-                <input type="text" id="Pproducto">
+                <input type="text" id="Pproducto" onkeypress="return validarN(event)">
+                <br>
+                <input type="text" readonly id="resultado-3">
                 <br>
                 <input type="button" value="Calcular">
-                <input type="button" value="Vaciar">
+                <input type="reset" value="Vaciar">
             </form>
         </article>
         
@@ -81,27 +90,27 @@
             <p> Un alumno desea saber cual será su calificación final en la materia de algoritmos. Dicha calificación se compone de los siguientes porcentajes:</p>
             <ul>
                 <li>55% del promedio de sus tres calificaciones parciales.</li>
-                <li>30% de la calificación del examen final. </li>
+                <li>30% de la calificación del examen final.</li>
                 <li>15% de la calificación de un trabajo final</li>
             </ul>
             <form>
                 <label >Calificacion del primer parcial</label>
-                <input type="text" id="parcial1">
+                <input type="text" id="parcial1" onkeypress="return validarN(event)">
                 <br>
                 <label >Calificacion del segundo parcial</label>
-                <input type="text" id="parcial2">
+                <input type="text" id="parcial2" onkeypress="return validarN(event)">
                 <br>
                 <label >Calificacion del tercer parcial</label>
-                <input type="text" id="parcial3">
+                <input type="text" id="parcial3" onkeypress="return validarN(event)">
                 <br>
                 <label >Calificacion de examen final</label>
-                <input type="text" id="examenfinal">
+                <input type="text" id="examenfinal" onkeypress="return validarN(event)">
                 <br>
                 <label >Calificacion del trabajo final</label>
-                <input type="text" id="trabajoFinal">
+                <input type="text" id="trabajoFinal" onkeypress="return validarN(event)">
                 <br>
                 <input type="button" value="Calcular">
-                <input type="button" value="Vaciar">
+                <input type="reset" value="Vaciar">
             </form>
         </article>
         
@@ -216,9 +225,9 @@
                 <input type="button" value="Vaciar">
             </form>
         </article>
-        
     </main>
 
+    <script src="./js/script.js"></script>
     <footer>
         <p><a href="../index.html">Volver al inicio</a></p>
     </footer>

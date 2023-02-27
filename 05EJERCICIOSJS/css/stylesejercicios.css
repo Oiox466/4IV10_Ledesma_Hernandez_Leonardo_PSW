@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color:thistle;
+}
+
+header{
+    background-color: red;
+}
+
+main{
+    align-items: center;
+}
+
+footer{
+    background-color: blue;
+}
+
+article{
+    margin: 10px;
+    border: 2px solid red;
+}
+
+form{
+    background-color: green;
+}

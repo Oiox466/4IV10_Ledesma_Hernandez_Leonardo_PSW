@@ -4,11 +4,223 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stylesejercicios.css">
     <title>Menu</title>
 </head>
 <body>
+    <header>
     <h1>Aquí se encuentran los 10 Ejercicios de JavaScript</h1>
+    <nav id="navegacion">
+        <p>Menú</p>
+        <ul>
+            <li><a href="#ejercicio-1">Ejercicio 1</a></li>
+            <li><a href="#ejercicio-2">Ejercicio 2</a></li>
+            <li><a href="#ejercicio-3">Ejercicio 3</a></li>
+            <li><a href="#ejercicio-4">Ejercicio 4</a></li>
+            <li><a href="#ejercicio-5">Ejercicio 5</a></li>
+            <li><a href="#ejercicio-6">Ejercicio 6</a></li>
+            <li><a href="#ejercicio-7">Ejercicio 7</a></li>
+            <li><a href="#ejercicio-8">Ejercicio 8</a></li>
+            <li><a href="#ejercicio-9">Ejercicio 9</a></li>
+            <li><a href="#ejercicio-10">Ejercicio 10</a></li>
+        </ul>
+    </nav>
+    </header>
 
-    <p><a href="../index.html">Volver al inicio</a></p>
+    <main>
+        <article id="ejercicio-1">
+            <h2>Ejercicio 1</h2>
+            <p>Suponga que un individuo desea invertir su capital en un banco y desea saber cuanto dinero ganara despues de un mes si el banco paga a razon de 8% mensual siendo el maximo de meses de 36.</p>
+            <form name="formulario" method="get">
+                <label>¿Cuánto dinero vas a invertir?</label>
+                <input type="text" id="invertir">
+                <br>
+                <label>¿Por cuántos meses lo vas a invertir?</label>
+                <input type="text" id="meses">
+                <br>
+                <input type="button" value="Calcular">
+                <input type="button" value="Vaciar">
+            </form>
+        </article>
+
+        <article id="ejercicio-2">
+            <h2>Ejercicio 2</h2>
+            <p>Un vendedor recibe un sueldo base mas un 10% extra por comisión de sus ventas las cuales son 5 que realiza durante un mes asi mismo se le hace un descuento del 12% por concepto de impuesto para lo cual desea saber el total que recibira como cobro.</p>
+            <form name="formulario" method="get">
+                <label>Sueldo</label>
+                <input type="text" id="pago">
+                <br>
+                <input type="button" value="Calcular">
+                <input type="button" value="Vaciar">
+            </form>
+        </article>
+        
+        <article id="ejercicio-3">
+            <h2>Ejercicio 3</h2>
+            <p>Se solicita un sistema de una tienda en el cual se debera solicitar el nombre del producto, la marca del producto, el tipo del producto y el precio del producto. Si el producto es "papas" recibe un 2% de descuento, si el producto es un "pastelito" recibe un 10% de descuento, si el producto es "un lacteo" recibe un 7.5% de descuento en la compra por lo cual se debera saber cuanto debera de pagar el cliente por el concepto del producto.</p>
+            <form>
+                <label >Nombre del producto</label>
+                <input type="text" id="Nproducto">
+                <br>
+                <label >Marca</label>
+                <input type="text" id="Mproducto">
+                <br>
+                <label >Tipo</label>
+                <input type="text" id="Tproducto">
+                <br>
+                <label >Precio</label>
+                <input type="text" id="Pproducto">
+                <br>
+                <input type="button" value="Calcular">
+                <input type="button" value="Vaciar">
+            </form>
+        </article>
+        
+        <article id="ejercicio-4">
+            <h2>Ejercicio 4</h2>
+            <p> Un alumno desea saber cual será su calificación final en la materia de algoritmos. Dicha calificación se compone de los siguientes porcentajes:</p>
+            <ul>
+                <li>55% del promedio de sus tres calificaciones parciales.</li>
+                <li>30% de la calificación del examen final. </li>
+                <li>15% de la calificación de un trabajo final</li>
+            </ul>
+            <form>
+                <label >Calificacion del primer parcial</label>
+                <input type="text" id="parcial1">
+                <br>
+                <label >Calificacion del segundo parcial</label>
+                <input type="text" id="parcial2">
+                <br>
+                <label >Calificacion del tercer parcial</label>
+                <input type="text" id="parcial3">
+                <br>
+                <label >Calificacion de examen final</label>
+                <input type="text" id="examenfinal">
+                <br>
+                <label >Calificacion del trabajo final</label>
+                <input type="text" id="trabajoFinal">
+                <br>
+                <input type="button" value="Calcular">
+                <input type="button" value="Vaciar">
+            </form>
+        </article>
+        
+        <article id="ejercicio-5">
+            <h2>Ejercicio 5</h2>
+            <p>Un maestro desea saber el porcentaje de hombres y porcentaje de mujeres de un grupo de estudiantes, dicho grupo solamente puede tener elementos de hombres con un porcentaje, elementos de mujeres con un porcentaje a partir de ahi obtener el 100%</p>
+            <form>
+                <label >Ingresa el numero de hombres</label>
+                <input type="text" id="hombre">
+                <br>
+                <label >Ingresa el numero de mujeres</label>
+                <input type="text" id="mujer">
+                <br>
+                <input type="button" value="Calcular">
+                <input type="button" value="Vaciar">
+            </form>
+        </article>
+        
+        <article id="ejercicio-6">
+            <h2>Ejercicio 6</h2>
+            <p>Realizar un algoritmo que calcule la edad de la persona.</p>
+            <form>
+                <label >Ingresa tu fecha de nacimiento</label>
+                <input type="date" name="nacimiento" id="fecha" max="2023-12-31">
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
+        </article>
+        
+        <article id="ejercicio-7">
+            <h2>Ejercicio 7</h2>
+            <p>Leer 2 numeros; si son iguales que los multiplique, si el primero es mayor que el segundo que haga una potencia si el segundo es mayor que el primero que los divida</p>
+            <form>
+                <label >Primer número</label>
+                <input type="text"  id="numerouno">
+                <br>
+                <label >Segundo número</label>
+                <input type="text" id="numerodos">
+                <br>
+                <input type="button" value="Calcular">
+                <input type="button" value="Vaciar">
+            </form>
+        </article>
+        
+        <article id="ejercicio-8">
+            <h2>Ejercicio 8</h2>
+            <p>Leer tres numeros diferentes e imprimir el numero mayor de los tres.</p>
+            <form>
+                <label >Primer número</label>
+                <input type="text" name="numero uno" id="numberOne">
+                <br>
+                <label >Segundo número</label>
+                <input type="text" id="numberTwo" name="numero dos">
+                <br>
+                <label >Tercer número</label>
+                <input type="text" id="numberThree" name="numero tres">
+                <br>
+                <input type="submit"value="Mayor">
+            </form>
+        </article>
+        
+        <article id="ejercicio-9">
+            <h2>Ejercicio 9</h2>
+            <p>Determinar la cantidad de dinero que recibirá un trabajador por concepto de las horas extras trabajadas en una empresa, sabiendo que cuando las horas de trabajo exceden de 40, el resto se consideran horas extras y que estas se pagan al doble de una hora normal cuando no exceden de 8; si las horas extras exceden de 8 se pagan las primeras 8 al doble de lo que se pagan las horas normales y el resto al triple.</p>
+            <form>
+                <label >Ingresa tu salario por hora</label>
+                <input type="text" name="salario" id="payment">
+                <br>
+                <label >Ingresa las horas trabajadas</label>
+                <input type="text" name="horas" id="hours">
+                <br>
+                <input type="submit" value="Calcular">
+            </form>
+        </article>
+        
+        <article id="ejercicio-10">
+            <h2>Ejercicio 10</h2>
+            <p>Calcular la utilidad que un trabajador recibe en el reparto anual de utilidades si este se le asigna como un porcentaje de su salario mensual que depende de su antigüedad en la empresa de acuerdo con la siguiente tabla:</p>
+            <table>
+                <tr>
+                    <th>Tiempo</th>
+                    <th>Utilidad</th>
+                </tr>
+                <tr>
+                    <td>Menos de 1 año</td>
+                    <td>5% del salario</td>
+                </tr>
+                <tr>
+                    <td>1 año o más y menos de 2 años</td>
+                    <td>7% del salario</td>
+                </tr>
+                <tr>
+                    <td>2 años o más y menos de 5 años</td>
+                    <td>10% del salario</td>
+                <tr>
+                    <td>5 años o más y menos de 10 años</td>
+                    <td>15% del salario</td>
+                </tr>
+                <tr>
+                    <td>10 años o más</td>
+                    <td>20% del salario</td>
+                </tr>
+            </table>
+            <form>
+                <label >Ingresa tu salario</label>
+                <input type="text" name="salario" id="lastment">
+                <br>
+                <label >Ingresa los años que haz trabajado</label>
+                <input type="text" name="años" id="years">
+                <br>
+                <input type="button" value="Calcular">
+                <input type="button" value="Vaciar">
+            </form>
+        </article>
+        
+    </main>
+
+    <footer>
+        <p><a href="../index.html">Volver al inicio</a></p>
+    </footer>
 </body>
 </html>

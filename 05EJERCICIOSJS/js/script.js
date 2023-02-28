@@ -239,8 +239,7 @@ function Ecinco() {
       mujeres = parseInt(mujeres);
   
       //Proceso
-      if (hombres >= 0 && mujeres >= 0) {
-        if (hombres <= 100 && mujeres <= 100) {
+      if (hombres >= 0 && mujeres >= 0 && hombres <= 50 && mujeres <= 50) {
           //Variables Finales
           let porcentajeHombres;
           let porcentajeMujeres;
@@ -250,14 +249,11 @@ function Ecinco() {
           totalPersonas = hombres + mujeres;
           porcentajeHombres = (hombres / totalPersonas) * 100;
           porcentajeMujeres = (mujeres / totalPersonas) * 100;
-          let Texto5 = "Con " + totalPersonas + " personas,  el " + porcentajeHombres.toFixed(0) + "% hombres y " + porcentajeMujeres.toFixed(0) + "% mujeres";
-          document.getElementById("resultado-5").value = Texto5;
-        } else {
-          alert("Ingresa datos validos");
-          return false;
-        }
-      } else {
-        alert("Ingresa datos validos");
+          let Texto5 = "Con " + totalPersonas + " personas, el " + porcentajeHombres.toFixed(0) + "% hombres y " + porcentajeMujeres.toFixed(0) + "% mujeres";
+          document.getElementById("resultado-5").value = Texto5; 
+      } 
+      else {
+        alert("Ingresa una cantidad coherente");
         return false;
       }
     }
@@ -339,7 +335,7 @@ function Eocho() {
       validor.test(numerodos) ||
       validor.test(numerotres)
     ) {
-      alert("Ingresa datos validos");
+      alert("Ingresa números positivos y enteros");
       return false;
     } else {
       mayor = Math.max(numerouno, numerodos, numerotres);

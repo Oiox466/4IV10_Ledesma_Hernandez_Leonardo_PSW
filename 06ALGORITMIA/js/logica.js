@@ -1,9 +1,14 @@
 //Problema 1
+function problema1(){
+    
+}
 
 //Problema 2
+function problema2(){
+
+}
 
 //Problema 3
-
 function problema3(){
     var alfabetos = ['A-Z','Ñ'];
 

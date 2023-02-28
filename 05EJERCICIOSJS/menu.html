@@ -4,26 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./css/stylesejercicios.css"> -->
+    <link rel="stylesheet" href="./css/stylesejercicios.css">
     <title>Menu</title>
 </head>
 <body>
     <header>
     <h1>Aquí se encuentran los 10 Ejercicios de JavaScript</h1>
-    <nav id="navegacion">
-        <p>Menú</p>
-        <ul>
-            <li><a href="#ejercicio-1">Ejercicio 1</a></li>
-            <li><a href="#ejercicio-2">Ejercicio 2</a></li>
-            <li><a href="#ejercicio-3">Ejercicio 3</a></li>
-            <li><a href="#ejercicio-4">Ejercicio 4</a></li>
-            <li><a href="#ejercicio-5">Ejercicio 5</a></li>
-            <li><a href="#ejercicio-6">Ejercicio 6</a></li>
-            <li><a href="#ejercicio-7">Ejercicio 7</a></li>
-            <li><a href="#ejercicio-8">Ejercicio 8</a></li>
-            <li><a href="#ejercicio-9">Ejercicio 9</a></li>
-            <li><a href="#ejercicio-10">Ejercicio 10</a></li>
-        </ul>
+    <nav>
+        <p><a href="#ejercicio-1">Ejercicio 1</a></p>
+        <p><a href="#ejercicio-2">Ejercicio 2</a></p>
+        <p><a href="#ejercicio-3">Ejercicio 3</a></p>
+        <p><a href="#ejercicio-4">Ejercicio 4</a></p>
+        <p><a href="#ejercicio-5">Ejercicio 5</a></p>
+        <p><a href="#ejercicio-6">Ejercicio 6</a></p>
+        <p><a href="#ejercicio-7">Ejercicio 7</a></p>
+        <p><a href="#ejercicio-8">Ejercicio 8</a></p>
+        <p><a href="#ejercicio-9">Ejercicio 9</a></p>
+        <p><a href="#ejercicio-10">Ejercicio 10</a></p>
     </nav>
     </header>
 
@@ -32,16 +29,28 @@
             <h2>Ejercicio 1</h2>
             <p>Suponga que un individuo desea invertir su capital en un banco y desea saber cuánto dinero ganará después de un mes si el banco paga a razon de 8% mensual siendo el maximo de meses de 36.</p>
             <form method="get">
-                <label>¿Cuánto dinero vas a invertir?</label>
-                <input type="number" min="1" max="1000000" id="invertir" onkeypress="return validarN(event)">
+                <table>
+                    <tr>
+                        <td>
+                            <label>¿Cuánto dinero vas a invertir?</label>
+                        </td>
+                        <td>
+                            <input type="number" min="1" max="1000000" id="invertir" onkeypress="return validarN(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>¿Por cuántos meses lo vas a invertir?</label>
+                        </td>
+                        <td>
+                            <input type="number" min="1" max="36" id="meses" onkeypress="return validarN(event)">
+                        </td>
+                    </tr>
+                </table>
+                <input type="text" readonly id="resultado-1" class="resultado">
                 <br>
-                <label>¿Por cuántos meses lo vas a invertir?</label>
-                <input type="number" min="1" max="36" id="meses" onkeypress="return validarN(event)">
-                <br>
-                <input type="text" readonly id="resultado-1">
-                <br>
-                <input type="button" value="Calcular" onclick="return Euno()">
-                <input type="reset" value="Vaciar">
+                <input type="button" value="Calcular" onclick="return Euno()" class="boton">
+                <input type="reset" value="Vaciar" class="boton">
             </form>
         </article>
 
@@ -49,16 +58,28 @@
             <h2>Ejercicio 2</h2>
             <p>Un vendedor recibe un sueldo base más un 10% extra por comisión de sus ventas las cuales son 5 que realiza durante un mes, asi mismo, se le hace un descuento del 12% por concepto de impuesto para lo cual desea saber el total que recibira como cobro.</p>
             <form method="get">
-                <label>Sueldo</label>
-                <input type="number" min="1" max="100000" id="pago" onkeypress="return validarN(event)">
+                <table>
+                    <tr>
+                        <td>
+                            <label>Sueldo base</label>
+                        </td>
+                        <td>
+                            <input type="number" min="1" max="100000" id="pago" onkeypress="return validarN(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Ganancia de las cinco ventas</label>
+                        </td>
+                        <td>
+                            <input type="number" min="1" max="100000" id="cantidad-ventas" onkeypress="return validarN(event)">
+                        </td>
+                    </tr>
+                </table>
+                <input type="text" readonly id="resultado-2" class="resultado">
                 <br>
-                <label>Ganancia de las cinco ventas</label>
-                <input type="number" min="1" max="100000" id="cantidad-ventas" onkeypress="return validarN(event)">
-                <br>
-                <input type="text" readonly id="resultado-2">
-                <br>
-                <input type="button" value="Calcular" onclick="return Edos()">
-                <input type="reset" value="Vaciar">
+                <input type="button" value="Calcular" onclick="return Edos()" class="boton">
+                <input type="reset" value="Vaciar" class="boton">
             </form>
         </article>
         
@@ -66,22 +87,28 @@
             <h2>Ejercicio 3</h2>
             <p>Se solicita un sistema de una tienda en el cuál se deberá solicitar el nombre, la marca, el tipo y el precio del producto. Si el producto es "papas" recibe un 2% de descuento, si es un "pastelito" recibe un 10% de descuento, si es "un lacteo" recibe un 7.5% de descuento en la compra por lo cual se debera saber cuanto deberá de pagar el cliente por el concepto del producto.</p>
             <form method="get">
-                <label >Nombre del producto</label>
-                <input type="text" id="Nproducto" onkeypress="return validarL()">
+                <table>
+                    <tr>
+                        <td><label >Nombre</label></td>
+                        <td><input type="text" id="Nproducto" onkeypress="return validarL()"></td>
+                    </tr>
+                    <tr>
+                        <td><label >Marca</label></td>
+                        <td><input type="text" id="Mproducto" onkeypress="return validarL()"></td>
+                    </tr>
+                    <tr>
+                        <td><label >Tipo</label></td>
+                        <td><input type="text" id="Tproducto" onkeypress="return validarL()"></td>
+                    </tr>
+                    <tr>
+                        <td><label >Precio</label></td>
+                        <td><input type="text" id="Pproducto" onkeypress="return validarN(event)"></td>
+                    </tr>
+                </table>
+                <input type="text" readonly id="resultado-3" class="resultado">
                 <br>
-                <label >Marca</label>
-                <input type="text" id="Mproducto" onkeypress="return validarL()">
-                <br>
-                <label >Tipo</label>
-                <input type="text" id="Tproducto" onkeypress="return validarL()">
-                <br>
-                <label >Precio</label>
-                <input type="text" id="Pproducto" onkeypress="return validarN(event)">
-                <br>
-                <input type="text" readonly id="resultado-3">
-                <br>
-                <input type="button" value="Calcular">
-                <input type="reset" value="Vaciar">
+                <input type="button" value="Calcular" onclick="return Etres()" class="boton">
+                <input type="reset" value="Vaciar" class="boton">
             </form>
         </article>
         
@@ -94,23 +121,32 @@
                 <li>15% de la calificación de un trabajo final</li>
             </ul>
             <form>
-                <label >Calificacion del primer parcial</label>
-                <input type="text" id="parcial1" onkeypress="return validarN(event)">
+                <table>
+                    <tr>
+                        <td><label >Calificacion del primer parcial</label></td>
+                        <td><input type="text" id="parcial1" onkeypress="return validarN(event)"></td>
+                    </tr>
+                    <tr>
+                        <td><label >Calificacion del segundo parcial</label></td>
+                        <td><input type="text" id="parcial2" onkeypress="return validarN(event)"></td>
+                    </tr>
+                    <tr>
+                        <td><label >Calificacion del tercer parcial</label></td>
+                        <td><input type="text" id="parcial3" onkeypress="return validarN(event)"></td>
+                    </tr>
+                    <tr>
+                        <td><label >Calificacion de examen final</label></td>
+                        <td><input type="text" id="examenfinal" onkeypress="return validarN(event)"></td>
+                    </tr>
+                    <tr>
+                        <td><label >Calificacion del trabajo final</label></td>
+                        <td><input type="text" id="trabajoFinal" onkeypress="return validarN(event)"></td>
+                    </tr>
+                </table>
+                <input type="text" readonly id="resultado-4" class="resultado">
                 <br>
-                <label >Calificacion del segundo parcial</label>
-                <input type="text" id="parcial2" onkeypress="return validarN(event)">
-                <br>
-                <label >Calificacion del tercer parcial</label>
-                <input type="text" id="parcial3" onkeypress="return validarN(event)">
-                <br>
-                <label >Calificacion de examen final</label>
-                <input type="text" id="examenfinal" onkeypress="return validarN(event)">
-                <br>
-                <label >Calificacion del trabajo final</label>
-                <input type="text" id="trabajoFinal" onkeypress="return validarN(event)">
-                <br>
-                <input type="button" value="Calcular">
-                <input type="reset" value="Vaciar">
+                <input type="button" value="Calcular" onclick="return Ecuatro()" class="boton">
+                <input type="reset" value="Vaciar" class="boton">
             </form>
         </article>
         
@@ -118,25 +154,33 @@
             <h2>Ejercicio 5</h2>
             <p>Un maestro desea saber el porcentaje de hombres y porcentaje de mujeres de un grupo de estudiantes, dicho grupo solamente puede tener elementos de hombres con un porcentaje, elementos de mujeres con un porcentaje a partir de ahi obtener el 100%</p>
             <form>
-                <label >Ingresa el numero de hombres</label>
-                <input type="text" id="hombre">
+                <table>
+                    <tr>
+                        <td><label >Número de hombres</label></td>
+                        <td><input type="text" id="hombre" onkeypress="return validarN(event)"></td>
+                    </tr>
+                    <tr>
+                        <td><label >Número de mujeres</label></td>
+                        <td><input type="text" id="mujer" onkeypress="return validarN(event)"></td>
+                    </tr>
+                </table>
+                <input type="text" readonly id="resultado-5" class="resultado">
                 <br>
-                <label >Ingresa el numero de mujeres</label>
-                <input type="text" id="mujer">
-                <br>
-                <input type="button" value="Calcular">
-                <input type="button" value="Vaciar">
+                <input type="button" value="Calcular" onclick="return Ecinco()" class="boton">
+                <input type="reset" value="Vaciar" class="boton">
             </form>
         </article>
         
         <article id="ejercicio-6">
             <h2>Ejercicio 6</h2>
             <p>Realizar un algoritmo que calcule la edad de la persona.</p>
-            <form>
+            <form  onsubmit="return Eseis()">
                 <label >Ingresa tu fecha de nacimiento</label>
                 <input type="date" name="nacimiento" id="fecha" max="2023-12-31">
                 <br>
-                <input type="submit" value="Enviar">
+                <input type="text" readonly id="resultado-6" class="resultado">
+                <br>
+                <input type="submit" value="Enviar" class="boton">
             </form>
         </article>
         
@@ -144,45 +188,64 @@
             <h2>Ejercicio 7</h2>
             <p>Leer 2 numeros; si son iguales que los multiplique, si el primero es mayor que el segundo que haga una potencia si el segundo es mayor que el primero que los divida</p>
             <form>
-                <label >Primer número</label>
-                <input type="text"  id="numerouno">
+                <table>
+                    <tr>
+                        <td><label>Primer número</label></td>
+                        <td><input type="text"  id="numerouno" onkeypress="return validarN(event)"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Segundo número</label></td>
+                        <td><input type="text" id="numerodos" onkeypress="return validarN(event)"></td>
+                    </tr>
+                </table>
+                <input type="text" readonly id="resultado-7" class="resultado">
                 <br>
-                <label >Segundo número</label>
-                <input type="text" id="numerodos">
-                <br>
-                <input type="button" value="Calcular">
-                <input type="button" value="Vaciar">
+                <input type="button" value="Calcular" onclick="return Esiete()" class="boton">
+                <input type="reset" value="Vaciar" class="boton">
             </form>
         </article>
         
         <article id="ejercicio-8">
             <h2>Ejercicio 8</h2>
             <p>Leer tres numeros diferentes e imprimir el numero mayor de los tres.</p>
-            <form>
-                <label >Primer número</label>
-                <input type="text" name="numero uno" id="numberOne">
+            <form onsubmit="return Eocho(this)">
+                <table>
+                    <tr>
+                        <td><label >Primer número</label></td>
+                        <td><input type="text" id="numberOne" onkeypress="return validarN(event)"></td>
+                    </tr>
+                    <tr>
+                        <td><label >Segundo número</label></td>
+                        <td><input type="text" id="numberTwo" onkeypress="return validarN(event)"></td>
+                    </tr>
+                    <tr>
+                        <td><label >Tercer número</label></td>
+                        <td><input type="text" id="numberThree"onkeypress="return validarN(event)"></td>
+                    </tr>
+                </table>
+                <input type="text" readonly id="resultado-8" class="resultado">
                 <br>
-                <label >Segundo número</label>
-                <input type="text" id="numberTwo" name="numero dos">
-                <br>
-                <label >Tercer número</label>
-                <input type="text" id="numberThree" name="numero tres">
-                <br>
-                <input type="submit"value="Mayor">
+                <input type="submit"value="Mayor" class="boton">
             </form>
         </article>
         
         <article id="ejercicio-9">
             <h2>Ejercicio 9</h2>
             <p>Determinar la cantidad de dinero que recibirá un trabajador por concepto de las horas extras trabajadas en una empresa, sabiendo que cuando las horas de trabajo exceden de 40, el resto se consideran horas extras y que estas se pagan al doble de una hora normal cuando no exceden de 8; si las horas extras exceden de 8 se pagan las primeras 8 al doble de lo que se pagan las horas normales y el resto al triple.</p>
-            <form>
-                <label >Ingresa tu salario por hora</label>
-                <input type="text" name="salario" id="payment">
+            <form onsubmit="return Enueve(this)">
+                <table>
+                    <tr>
+                        <td><label >Ingresa tu salario por hora</label></td>
+                        <td><input type="text" id="payment" onkeypress="return validarN(event)"></td>
+                    </tr>
+                    <tr>
+                        <td><label >Ingresa las horas trabajadas</label></td>
+                        <td><input type="text" id="hours" onkeypress="return validarN(event)"></td>
+                    </tr>
+                </table>
+                <input type="text" readonly id="resultado-9" class="resultado">
                 <br>
-                <label >Ingresa las horas trabajadas</label>
-                <input type="text" name="horas" id="hours">
-                <br>
-                <input type="submit" value="Calcular">
+                <input type="submit" value="Calcular" class="boton">
             </form>
         </article>
         
@@ -214,15 +277,21 @@
                     <td>20% del salario</td>
                 </tr>
             </table>
-            <form>
-                <label >Ingresa tu salario</label>
-                <input type="text" name="salario" id="lastment">
+            <form onkeypress="return validarN(event)">
+                <table>
+                    <tr>
+                        <td><label >Ingresa tu salario</label></td>
+                        <td><input type="text" id="lastment" onkeypress="return validarN(event)"></td>
+                    </tr>
+                    <tr>
+                        <td><label >Ingresa los años que haz trabajado</label></td>
+                        <td><input type="text" id="years" onkeypress="return validarN(event)"></td>
+                    </tr>
+                </table>
+                <input type="text" readonly id="resultado-10" class="resultado">
                 <br>
-                <label >Ingresa los años que haz trabajado</label>
-                <input type="text" name="años" id="years">
-                <br>
-                <input type="button" value="Calcular">
-                <input type="button" value="Vaciar">
+                <input type="button" value="Calcular" onclick="return Ediez()" class="boton">
+                <input type="reset" value="Vaciar" class="boton">
             </form>
         </article>
     </main>

@@ -1,28 +1,104 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body{
-    background-color:thistle;
+    background-color:black;
 }
 
 header{
-    background-color: red;
+    margin-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 40%;
+}
+
+h1{
+    font-size: 30px;
+    color: #286B51;
+}
+
+a{
+    color: #6EFFB5;
+}
+
+nav{
+    font-size: 25px;
 }
 
 main{
     align-items: center;
+    text-align: justify;
 }
 
 footer{
-    background-color: blue;
+    font-size: 32px;
+    text-align: center;
 }
 
 article{
-    margin: 10px;
-    border: 2px solid red;
+    color: white;
+    margin: 25px;
+    border: 2px solid #10EA97;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0px 0px 15px #58EEB5;
+    background-color: #076B45;
+}
+
+input{
+    background-color: #6B0D34;
+    color: white;
+    margin: 2px;
+    padding: 1px;
+}
+
+ul{
+    margin-left: 20px;
 }
 
 form{
-    background-color: green;
+    margin-top: 5px;
+    padding-top: 3px;
+    border-top: 2px dotted #6B0D34;
+}
+
+.boton{
+    width: 60px;
+    border: 1px dotted white;
+}
+
+.resultado{
+    width: 400px;
+}
+
+#resultado-1{
+    width: 370px;
+}
+
+#resultado-2{
+    width: 230px;
+}
+
+#resultado-3{
+    width: 370px;
+}
+
+#resultado-5{
+    width: 300px;
+}
+
+#resultado-6{
+    width: 1;
+}
+
+#resultado-7{
+    width: 450px;
+}
+
+#resultado-10{
+    width: 140px;
 }

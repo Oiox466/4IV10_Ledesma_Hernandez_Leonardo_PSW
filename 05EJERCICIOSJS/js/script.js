@@ -159,62 +159,42 @@ function Ecuatro() {
     let validor = /\D\./;
   
     //Validacion extra
-    if (
-      validor.test(parcial1) ||
-      validor.test(parcial2) ||
-      validor.test(parcial3) ||
-      validor.test(examenfinal) ||
-      validor.test(trabajofinal)
+    if (validor.test(parcial1) || validor.test(parcial2) || validor.test(parcial3) || validor.test(examenfinal) || validor.test(trabajofinal)
     ) {
       alert("Ingresa datos validos");
       return false;
-    } else {
+    } 
+    else {
       //Parseo de datos
       parcial1 = parseFloat(parcial1);
       parcial2 = parseFloat(parcial2);
       parcial3 = parseFloat(parcial3);
       examenfinal = parseFloat(examenfinal);
-      trabajofinal = parseFloat(trabajfFinal);
+      trabajofinal = parseFloat(trabajofinal);
   
       //Proceso
-      if (
-        parcial1 >= 0 &&
-        parcial2 >= 0 &&
-        parcial3 >= 0 &&
-        examenfinal >= 0 &&
-        trabajofinal >= 0
-      ) {
-        if (
-          parcial1 <= 10 &&
-          parcial2 <= 10 &&
-          parcial3 <= 10 &&
-          examenfinal <= 10 &&
-          trabajofinal <= 10
-        ) {
+      if (parcial1 >= 0 && parcial2 >= 0 && parcial3 >= 0 && examenfinal >= 0 && trabajofinal >= 0 && parcial1 <= 10 &&parcial2 <= 10 && parcial3 <= 10 && examenfinal <= 10 &&trabajofinal <= 10) {
           //Variables Finales
           let promedioParciales;
           let porcentajeParciales;
-          let porcentajeExamenfinal;
-          let porcentajeTrabajofinal;
-          let calificacionFinal;
-  
+          let porcentajeE;
+          let porcentajeT;
+          let calificacion;
+
+          let Texto4;
+          let Texto41;
           //Calculos
           promedioParciales = (parcial1 + parcial2 + parcial3) / 3;
-          alert(
-            "Tu promedio de los parciales es: " + promedioParciales.toFixed(2)
-          );
+          Texto4="Tu promedio de los parciales es: " + promedioParciales.toFixed(2);
           porcentajeParciales = promedioParciales * 0.55;
-          porcentajeExamenfinal = examenfinal * 0.3;
-          porcentajeTrabajofinal = Trabajofinal * 0.15;
-          calificacionFinal =
-            porcentajeParciales + porcentajeExamenfinal + porcentajeTrabajoFinal;
-          alert("Tu calificacion final es: " + calificacionFinal.toFixed(2));
+          porcentajeE = examenfinal * 0.3;
+          porcentajeT = trabajofinal * 0.15;
+          calificacion = porcentajeParciales + porcentajeE + porcentajeT;
+          Texto41="Tu calificacion final es: " + calificacion.toFixed(2);
+          document.getElementById("resultado-4").value = Texto4 + " , " + Texto41;
           return true;
-        } else {
-          alert("Ingresa calificaciones validas");
-          return false;
-        }
-      } else {
+      } 
+      else {
         alert("Ingresa una calificacion valida ");
         return false;
       }
@@ -233,7 +213,8 @@ function Ecinco() {
     if (validor.test(hombres) || validor.test(mujeres)) {
       alert("Ingresa datos validos");
       return false;
-    } else {
+    } 
+    else {
       //Parseo de datos
       hombres = parseInt(hombres);
       mujeres = parseInt(mujeres);
@@ -277,7 +258,8 @@ function Eseis() {
     if (año > añoActual || año < "1940") {
       alert("No se puede ingresar ese año ");
       return false;
-    } else {
+    } 
+    else {
       edadAño = añoActual - año;
       edadMes = mesActual - mes;
   
@@ -298,7 +280,8 @@ function Esiete() {
     if (validor.test(numero1) || validor.test(numero2)) {
       alert("Ingresa datos validos");
       return false;
-    } else {
+    } 
+    else {
       numero1 = parseFloat(numero1);
       numero2 = parseFloat(numero2);
       if (numero1 < 1000 || numero2 < 1000) {
@@ -307,11 +290,13 @@ function Esiete() {
           resultado = Math.pow(numero1, numero2);
           Texto7="El numero mayor es: " + numero1 + " entonces el resultado de la operacion es: " + resultado;
           document.getElementById("resultado-7").value = Texto7;
-        } else if (numero2 > numero1) {
+        } 
+        else if (numero2 > numero1) {
           resultado = numero2 / numero1;
           Texto7="El numero mayor es: " + numero2 +" entonces el resultado de la operacion es: " +resultado;
           document.getElementById("resultado-7").value = Texto7;
-        } else if (numero2 == numero1) {
+        } 
+        else if (numero2 == numero1) {
           resultado = numero1 * numero2;
           Texto7 = "Los numeros son iguales entonces el resultado de la operacion es: " + resultado;
           document.getElementById("resultado-7").value = Texto7;
@@ -337,7 +322,8 @@ function Eocho() {
     ) {
       alert("Ingresa números positivos y enteros");
       return false;
-    } else {
+    } 
+    else {
       mayor = Math.max(numerouno, numerodos, numerotres);
       let Texto8 ="El numero mayor es: " + mayor;
       document.getElementById("resultado-8").value = Texto8;
@@ -363,20 +349,18 @@ function Enueve() {
       salario == 0 ||
       horasTrabajadas == 0
     ) {
-      alert("Ingresa datos validos");
+      alert("Ingresa numeros enteros positivos");
       return false;
-    } else {
+    } 
+    else {
       if (horasTrabajadas > 40) {
         pagoExtra = true;
-      } else {
+      } 
+      else {
         pagoExtra = false;
       }
   
-      if (
-        salario > 0 &&
-        salario < 999999 &&
-        horasTrabajadas > 0 &&
-        horasTrabajadas < 100000
+      if (salario > 0 && salario <= 50000 && horasTrabajadas > 0 && horasTrabajadas <= 50000
       ) {
         if (pagoExtra == true) {
           horasSobrantes = horasTrabajadas - 40;
@@ -387,19 +371,21 @@ function Enueve() {
             pagoTriple = horasTriple * (salario * 3);
             pago = 40 * salario;
             pagoTotal = pago + pagoDoble + pagoTriple;
-          } else {
+          } 
+          else {
             horasDoble = horasSobrantes;
             pagoDoble = horasDoble * (salario * 2);
             pago = 40 * salario;
             pagoTotal = pago + pagoDoble;
           }
-        } else {
+        } 
+        else {
           pagoTotal = horasTrabajadas * salario;
         }
         let Texto9 = "Tu pago de todo es: $" + pagoTotal;
         document.getElementById("resultado-9").value = Texto9;
       } else {
-        alert("Ingresa datos validos");
+        alert("Ingresa números validos");
         return false;
       }
     }
@@ -415,29 +401,35 @@ function Ediez() {
     if (validor.test(salario) || validor.test(antiguedad)) {
       alert("Ingresa datos validos");
       return false;
-    } else {
+    } 
+    else {
       if (antiguedad > 0 && antiguedad < 70) {
-        if (salario > 0 && salario < 999999) {
+        if (salario > 0 && salario < 100000) {
           if (antiguedad < 1) {
             utilidad = 0.05;
-          } else if (antiguedad >= 1 && antiguedad <= 2) {
+          } 
+          else if (antiguedad >= 1 && antiguedad <= 2) {
             utilidad = 0.07;
-          } else if (antiguedad >= 2 && antiguedad <= 5) {
+          } 
+          else if (antiguedad >= 2 && antiguedad <= 5) {
             utilidad = 0.1;
-          } else if (antiguedad >= 5 && antiguedad <= 10) {
+          } 
+          else if (antiguedad >= 5 && antiguedad <= 10) {
             utilidad = 0.15;
-          } else if (antiguedad > 10) {
+          } 
+          else if (antiguedad > 10) {
             utilidad = 0.2;
           }
           pago = salario * utilidad;
           let Texto10 = "Tu utilidad es: $" + pago.toFixed(3);
           document.getElementById("resultado-10").value = Texto10;
-        } else {
-          alert("Ingresa un salario valido");
+        } 
+        else {
+          alert("Ingresa un salario realista");
           return false;
         }
       } else {
-        alert("Ingresa unos años validos");
+        alert("Coloca años coherentes");
         return false;
       }
     }

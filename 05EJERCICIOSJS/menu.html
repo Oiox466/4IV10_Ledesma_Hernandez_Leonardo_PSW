@@ -124,23 +124,23 @@
                 <table>
                     <tr>
                         <td><label >Calificacion del primer parcial</label></td>
-                        <td><input type="text" id="parcial1" onkeypress="return validarN(event)"></td>
+                        <td><input type="number" min="0" max="10" id="parcial1" onkeypress="return validarN(event)"></td>
                     </tr>
                     <tr>
                         <td><label >Calificacion del segundo parcial</label></td>
-                        <td><input type="text" id="parcial2" onkeypress="return validarN(event)"></td>
+                        <td><input type="number" min="0" max="10"  id="parcial2" onkeypress="return validarN(event)"></td>
                     </tr>
                     <tr>
                         <td><label >Calificacion del tercer parcial</label></td>
-                        <td><input type="text" id="parcial3" onkeypress="return validarN(event)"></td>
+                        <td><input type="number" min="0" max="10"  id="parcial3" onkeypress="return validarN(event)"></td>
                     </tr>
                     <tr>
                         <td><label >Calificacion de examen final</label></td>
-                        <td><input type="text" id="examenfinal" onkeypress="return validarN(event)"></td>
+                        <td><input type="number" min="0" max="10"  id="examenfinal" onkeypress="return validarN(event)"></td>
                     </tr>
                     <tr>
                         <td><label >Calificacion del trabajo final</label></td>
-                        <td><input type="text" id="trabajoFinal" onkeypress="return validarN(event)"></td>
+                        <td><input type="number" min="0" max="10"  id="trabajofinal" onkeypress="return validarN(event)"></td>
                     </tr>
                 </table>
                 <input type="text" readonly id="resultado-4" class="resultado">
@@ -174,13 +174,14 @@
         <article id="ejercicio-6">
             <h2>Ejercicio 6</h2>
             <p>Realizar un algoritmo que calcule la edad de la persona.</p>
-            <form  onsubmit="return Eseis()">
+            <form>
                 <label >Ingresa tu fecha de nacimiento</label>
                 <input type="date" name="nacimiento" id="fecha" max="2023-12-31">
                 <br>
                 <input type="text" readonly id="resultado-6" class="resultado">
                 <br>
-                <input type="submit" value="Enviar" class="boton">
+                <input type="button" value="Enviar" class="boton" onclick="return Eseis()">
+                <input type="reset" value="Vaciar" class="boton">
             </form>
         </article>
         
@@ -208,7 +209,7 @@
         <article id="ejercicio-8">
             <h2>Ejercicio 8</h2>
             <p>Leer tres numeros diferentes e imprimir el numero mayor de los tres.</p>
-            <form onsubmit="return Eocho(this)">
+            <form>
                 <table>
                     <tr>
                         <td><label >Primer número</label></td>
@@ -225,27 +226,29 @@
                 </table>
                 <input type="text" readonly id="resultado-8" class="resultado">
                 <br>
-                <input type="submit"value="Mayor" class="boton">
+                <input type="button"value="Calcular" class="boton" onclick="return Eocho()">
+                <input type="reset" value="Vaciar" class="boton">
             </form>
         </article>
         
         <article id="ejercicio-9">
             <h2>Ejercicio 9</h2>
             <p>Determinar la cantidad de dinero que recibirá un trabajador por concepto de las horas extras trabajadas en una empresa, sabiendo que cuando las horas de trabajo exceden de 40, el resto se consideran horas extras y que estas se pagan al doble de una hora normal cuando no exceden de 8; si las horas extras exceden de 8 se pagan las primeras 8 al doble de lo que se pagan las horas normales y el resto al triple.</p>
-            <form onsubmit="return Enueve(this)">
+            <form>
                 <table>
                     <tr>
                         <td><label >Ingresa tu salario por hora</label></td>
-                        <td><input type="number" id="payment" onkeypress="return validarN(event)"></td>
+                        <td><input type="number" min="1" max="50000" id="payment" onkeypress="return validarN(event)"></td>
                     </tr>
                     <tr>
                         <td><label >Ingresa las horas trabajadas</label></td>
-                        <td><input type="number" id="hours" onkeypress="return validarN(event)"></td>
+                        <td><input type="number" min="1" max="50000" id="hours" onkeypress="return validarN(event)"></td>
                     </tr>
                 </table>
                 <input type="text" readonly id="resultado-9" class="resultado">
                 <br>
-                <input type="submit" value="Calcular" class="boton">
+                <input type="button" value="Calcular" class="boton" onclick="return Enueve()">
+                <input type="reset" value="Vaciar" class="boton">
             </form>
         </article>
         
@@ -277,7 +280,7 @@
                     <td>20% del salario</td>
                 </tr>
             </table>
-            <form onkeypress="return validarN(event)">
+            <form>
                 <table>
                     <tr>
                         <td><label >Ingresa tu salario</label></td>

@@ -87,16 +87,28 @@ form{
     width: 400px;
 }
 
+#resultado-4{
+    width: 410px;
+}
+
 #resultado-5{
     width: 300px;
 }
 
 #resultado-6{
-    width: 1;
+    width: 150px;
 }
 
 #resultado-7{
     width: 450px;
+}
+
+#resultado-8{
+    width: 150PX;
+}
+
+#resultado-9{
+    width: 190px;
 }
 
 #resultado-10{

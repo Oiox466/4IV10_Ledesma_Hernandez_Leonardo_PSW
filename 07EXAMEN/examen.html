@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styless.css" />
+    <title>Examen</title>
+  </head>
+  <body>
+    <header>
+      <h1>Te Estafo</h1>
+      <p>Calcula el interes compuesto</p>
+    </header>
+
+    <main>
+      <div class="datos">
+        <form>
+          <label
+            >Tabla de interés compuesto para inverir en un terreno en la playa
+            Bajo un préstamo de $</label
+          >
+          <input type="number" id="dinero" placeholder="Desde $1,000 a $1,000,000" min="1000" max="1000000" step="100"onkeypress="return validarN(event)"/>
+          <label>del 23% anual por </label>
+          <input type="number" id="tiempo" min="1" max="4" placeholder="máximo 4" onkeypress="return validarN(event)"/>
+          <label>años</label>
+          <br />
+          <input class="boton"type="button" value="Calcular" onclick="return prestamo()"/>
+          <input class="boton"type="reset" value="Volver a calcular" />
+        </form>
+      </div>
+
+      <div class="resultado">
+        <table class="respuesta">
+          <thead>
+            <tr>
+              <th colspan="5">Tabla de amortización</th>
+            </tr>
+            <tr>
+              <th>No. de Pago</th>
+              <th>Capital</th>
+              <th>Interés</th>
+              <th>Cuota</th>
+              <th>Saldo final</th>
+            </tr>
+          </thead>
+          <tbody id="tabla"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

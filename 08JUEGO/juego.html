@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafío cromático</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <a href="../index.html">a</a>
-            <p id="como-jugar">Cómo jugar</p>
+            <p><a href="../index.html"><img src="./assets/images/corona.png" alt="inicio" class="icono"></a> El juego es simple, adivina el codigo hexadecimal del cuadrado en pantalla. El boton enviar es para calcular el pocentaje de acertación. El boton Nuevo es para continuar con un nuevo desafio sin reiniciar el puntaje. El boton Reiniciar resete todo</p>
         </nav>
-        <h1>Desafío cromático</h1>
     </header>
 
     <main>
         <div class="container">
-            <div class="cuadrado"></div>
+            <h1 class="title">Desafío cromático</h1>
+            <div class="cuadrado" id="cuadrado-juego"></div>
             <form>
-                <input type="text" maxlength="6">
-                <input type="button" value="Enviar" class="enviar" id="enviar">
+                <input type="text" onkeypress="return validarHexadecimal(event)" maxlength="6" placeholder="Codigo hexadecimal" id="hexadecimal">
+                <input type="text" readonly value="Puntaje: " id="puntaje">
+                <br>
+                <input type="button" value="Enviar" class="boton" onclick="sumbit()">
+                <input type="button" value="Nuevo" class="boton">
+                <input type="reset" value="Reiniciar" class="boton">
             </form>
         </div>
     </main>
@@ -33,7 +37,7 @@
                 <button id="ingles" onclick="return ingles()"><img src="./assets/images/ingles.png" alt=""></button>
             </form>
         </div>
-        <p class="copyright">Copyright 2023</p>
+        <p class="copyright">®Copyright-2023</p>
     </footer>
 </body>
 </html>

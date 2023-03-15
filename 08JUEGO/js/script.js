@@ -1,5 +1,5 @@
-// Funcion para validar el input
 var puntuacion = 0;
+// Funcion para validar el input
 function validarHexadecimal(e) {
     var tecla = e.key;
     var patron = /^[0-9a-fA-F]*$/;
@@ -326,9 +326,18 @@ function sumbit(){
         
         puntuacion = puntuacion + final
         document.getElementById("puntaje").value = "Puntaje: " + puntuacion;
+
+        // Invocamos la función al final para que nos cambie el color;
+        establecerColorFondoAleatorio();
+        document.getElementById("hexadecimal").value = "";
     }
 }
 
+// funcion para reiniciar todo
+function resetear(){
+    puntuacion = 0;
+    establecerColorFondoAleatorio();
+}
 // Necesitamos pasar el RGB a hexadecimal
 function decAHex(d) {
     var hex = Number(d).toString(16);
@@ -349,17 +358,20 @@ function rgbAHex(R, G, B) {
 
 function operador(bg,hex){
     if(hex < bg){
-        return (hex / bg)*100;
+        return ((hex+1) / (bg+1))*100;
     }
     else if(bg < hex){
-        return (bg / hex)*100;
+        return ((bg+1) / (hex+1))*100;
     }
 }
 
+// Funcion que aleatoriza el color al cargar la página
 function establecerColorFondoAleatorio() {
-    var colores = ['red', 'blue', 'green', 'yellow', 'purple', 'orange']; // Lista de colores disponibles
-    var indiceAleatorio = Math.floor(Math.random() * colores.length); // Índice aleatorio en la lista
-    var colorFondo = colores[indiceAleatorio]; // Color de fondo aleatorio
+    var hexadecimales = '0123456789ABCDEF'; // Lista de valores de colores disponibles
+    var colorFondo = '#'; // Color de fondo aleatorio
+    for (var i = 0; i < 6; i++) {
+        colorFondo += hexadecimales[Math.floor(Math.random() * 16)];// Índice aleatorio en la lista
+    }
     var div = document.getElementById("cuadrado-juego"); // Obtener el elemento div
     div.style.backgroundColor = colorFondo; // Establecer el color de fondo aleatorio
 }
@@ -372,5 +384,24 @@ function separarRGB(valorRGB) {
     return [r, g, b];
 }
 
+function cambiarIdiomaEsp(){
+    document.documentElement.lang = "es";
+    document.getElementById("hexadecimal").setAttribute("placeholder", "Código hexadecimal");
+    document.getElementById("puntaje").value = "Puntaje: " + puntuacion;
+    document.getElementById("submit").value = "Enviar";
+    document.getElementById("reiniciar").value = "Reiniciar";
+    document.getElementById("title").textContent = "Desafío Cromático";
+    document.getElementById("instrucciones").textContent = "El juego es simple, adivina el codigo hexadecimal del cuadrado en pantalla. El boton enviar es para calcular el pocentaje de acertación. El boton Reiniciar reinicia todo";
+}
+
+function cambiarIdiomaIng(){
+    document.documentElement.lang = "en";
+    document.getElementById("hexadecimal").setAttribute("placeholder", "Hexadecimal Code");
+    document.getElementById("puntaje").value = "Score: " + puntuacion;
+    document.getElementById("submit").value = "Submit";
+    document.getElementById("reiniciar").value = "Restart";
+    document.getElementById("title").textContent = "Cromatic Challenge";
+    document.getElementById("instrucciones").textContent = "The game is simple, guess the hexadecimal code of the square on the screen. The submit button is to calculate the hit percentage. The restart button resets everything";
+}
   // Llamar a la función al cargar la página
 window.addEventListener('load', establecerColorFondoAleatorio);

@@ -77,6 +77,10 @@ input:active{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.title:hover, input:hover{
+    text-shadow: 1px 5px 10px #0C9973;
+}
+
 .cuadrado{
     width: 250px;
     height: 250px;
@@ -87,6 +91,7 @@ input:active{
 }
 
 .icono{
+    margin-top: 10px;
     width: 96px;
     height: 54px;
 }
@@ -128,4 +133,17 @@ img{
 #puntaje{
     padding-left: 8px;
     text-align: left;
+}
+
+#instrucciones{
+    /* background-color: #44064D; */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 2px 5px 10px #44064D;
+    padding-left: 15px;
+    width: 50%;
+    min-width: 600px;
+    position: absolute;
+    left: 100px;
+    top: 17px;
+    color: white;
 }

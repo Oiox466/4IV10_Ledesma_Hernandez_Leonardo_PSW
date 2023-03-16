@@ -322,6 +322,25 @@ function sumbit(){
         res4 = parseInt(operador(cuatrobg,cuatrohex));
         res5 = parseInt(operador(cincobg,cincohex));
         res6 = parseInt(operador(seisbg,seishex));
+        
+        if(isNaN(res1)){
+            res1 = 0;
+        }
+        if(isNaN(res2)){
+            res2 = 0;
+        }
+        if(isNaN(res3)){
+            res3 = 0;
+        }
+        if(isNaN(res4)){
+            res4 = 0;
+        }
+        if(isNaN(res5)){
+            res5 = 0;
+        }
+        if(isNaN(res6)){
+            res6 = 0;
+        }
         var final = parseInt((res1 + res2 + res3 + res4 + res5 + res6)/6)*10;
         
         puntuacion = puntuacion + final
@@ -330,6 +349,7 @@ function sumbit(){
         // Invocamos la función al final para que nos cambie el color;
         establecerColorFondoAleatorio();
         document.getElementById("hexadecimal").value = "";
+        alert("El color es #" + bgcolor.toLocaleUpperCase() + " acertando un " + (final)/10);
     }
 }
 
@@ -357,11 +377,14 @@ function rgbAHex(R, G, B) {
 }
 
 function operador(bg,hex){
+    if(bg === 0 || hex === 0) {
+        return 0;
+    }
     if(hex < bg){
-        return ((hex+1) / (bg+1))*100;
+        return (hex / bg)*100;
     }
     else if(bg < hex){
-        return ((bg+1) / (hex+1))*100;
+        return (bg / hex)*100;
     }
 }
 

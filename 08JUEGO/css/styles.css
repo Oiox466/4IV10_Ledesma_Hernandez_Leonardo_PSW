@@ -11,6 +11,7 @@ body{
 header{
     background-color: rgb(141, 130, 130);
     border-bottom: 3px dotted black;
+    height: auto;
 }
 
 footer{
@@ -140,7 +141,7 @@ img{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-shadow: 2px 5px 10px #44064D;
     padding-left: 15px;
-    width: 50%;
+    width: 90%;
     min-width: 600px;
     position: absolute;
     left: 100px;
